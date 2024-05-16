@@ -44,7 +44,7 @@
 </head>
 <body>
     <h2>User Registration Form</h2>
-    <form id="registrationForm" action="registration.php" method="post">
+    <form id="registrationForm" action="{{ route('user.store') }}" method="post">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
