@@ -7,36 +7,36 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // jQuery validation rules
+            
             $('#registrationForm').submit(function(e) {
                 e.preventDefault(); // Prevent form submission
 
-                // Validation for Name
+        
                 var name = $('#name').val().trim();
                 if (!/^[A-Za-z\s]+$/.test(name)) {
                     alert('Please enter alphabetic characters only for Name.');
                     return;
                 }
 
-                // Validation for Email
+
                 var email = $('#email').val().trim();
                 if (!/\S+@\S+\.\S+/.test(email)) {
                     alert('Please enter a valid email address.');
                     return;
                 }
 
-                // Validation for Phone number
+
                 var phone = $('#phone').val().trim();
                 if (!/^\d{7,12}$/.test(phone)) {
                     alert('Phone number must be between 7 to 12 digits.');
                     return;
                 }
 
-                // Validation for Captcha
+        
                 var captcha = $('#captcha').val().trim();
-                // Implement your Captcha validation logic here
+                
 
-                // If all validations pass, submit the form
+                
                 this.submit();
             });
         });
@@ -69,7 +69,7 @@
         <div>
             <label for="captcha">Captcha:</label>
             <input type="text" id="captcha" name="captcha" required>
-            <!-- Your captcha logic goes here -->
+
         </div>
         <div>
             <button type="submit">Submit</button>
